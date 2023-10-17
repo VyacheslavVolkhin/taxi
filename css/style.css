@@ -500,6 +500,18 @@ body {
     font-size: 1em;
   }
 }
+@media (min-width: 768px) {
+  .header {
+    position: fixed;
+    background: #fff;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  .wrap {
+    padding-top: 9.3rem;
+  }
+}
 /* ----------------------------------- *\
 			items styles
 \* ----------------------------------- */
