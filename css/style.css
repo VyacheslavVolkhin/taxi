@@ -920,6 +920,106 @@ body {
 /* ----------------------------------- *\
 			content styles
 \* ----------------------------------- */
+body.popup-open {
+  overflow: hidden;
+}
+.popup-outer-box {
+  display: none;
+  padding: 50px 20px;
+  animation: fadein ease 0.2s;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  position: fixed;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.7);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.popup-outer-box.active {
+  display: -ms-flexbox;
+  display: flex;
+}
+.popup-box {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+  width: 400px;
+  max-width: 100%;
+  max-height: 100%;
+  background-color: #fff;
+  z-index: 20;
+  border-radius: 20px;
+  padding: 30px 24px;
+}
+.popup-box .popup-title-wrap,
+.popup-box .popup-footer-wrap {
+  width: 100%;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+.popup-box .popup-content-wrap {
+  width: 100%;
+  overflow: auto;
+  -ms-overflow-style: none;
+}
+.popup-box .popup-content-wrap::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+.popup-box .btn-action-close {
+  display: block;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+}
+.popup-box .btn-action-close:before,
+.popup-box .btn-action-close:after {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: var(--clr-base);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -1px 0 0 -10px;
+  transform: rotate(45deg);
+}
+.popup-box .btn-action-close:before {
+  transform: rotate(-45deg);
+}
+@media (max-width: 1023px) {
+  .popup-outer-box {
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    height: 100%;
+    -ms-flex-align: start;
+        align-items: flex-start;
+  }
+  .popup-outer-box::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+  .popup-outer-box .popup-box {
+    max-height: inherit;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+  }
+}
 .main-section-box {
   margin-bottom: 90px;
   margin-bottom: 9rem;
@@ -1234,6 +1334,20 @@ select.form-input:required:invalid {
 }
 .frm-field {
   display: block;
+  width: 100%;
+}
+.frm-popup .frm-field {
+  margin-bottom: 10px;
+}
+.frm-popup .frm-row-submit {
+  padding-top: 10px;
+}
+.frm-popup .frm-title {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+.frm-popup .btn {
   width: 100%;
 }
 /* ----------------------------------- *\

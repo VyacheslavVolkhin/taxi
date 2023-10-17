@@ -14,6 +14,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/style.min.css" />
+    <script src="./js/jquery.min.js" defer></script>
+    <script src="./js/jquery.maskedinput.min.js" defer></script>
+    <script src="./js/scripts.js" defer></script>
 </head>
 
 <body>
@@ -268,7 +271,7 @@
                     <!--/item wrap-->
                 </div>
                 <div class="action-box">
-                    <a href="" class="btn">начать работать</a>
+                    <a href="" class="btn" onclick="document.body.classList.add('popup-open');document.querySelector('.popup-outer-box').classList.add('active');return false;">начать работать</a>
                 </div>
             </div>
             <!--/terms-box-->
@@ -331,7 +334,7 @@
                                         в сутки
                                     </div>
                                     <div class="tile-button-wrap">
-                                        <a href="" class="btn button-small">Начать работать</a>
+                                        <a href="" class="btn button-small" onclick="document.body.classList.add('popup-open');document.querySelector('.popup-outer-box').classList.add('active');return false;">Начать работать</a>
                                     </div>
                                 </div>
                             </div>
@@ -389,7 +392,7 @@
                                         в сутки
                                     </div>
                                     <div class="tile-button-wrap">
-                                        <a href="" class="btn button-small">Начать работать</a>
+                                        <a href="" class="btn button-small" onclick="document.body.classList.add('popup-open');document.querySelector('.popup-outer-box').classList.add('active');return false;">Начать работать</a>
                                     </div>
                                 </div>
                             </div>
@@ -448,7 +451,7 @@
                                         в сутки
                                     </div>
                                     <div class="tile-button-wrap">
-                                        <a href="" class="btn button-small">Начать работать</a>
+                                        <a href="" class="btn button-small" onclick="document.body.classList.add('popup-open');document.querySelector('.popup-outer-box').classList.add('active');return false;">Начать работать</a>
                                     </div>
                                 </div>
                             </div>
@@ -506,7 +509,7 @@
                                         в сутки
                                     </div>
                                     <div class="tile-button-wrap">
-                                        <a href="" class="btn button-small">Начать работать</a>
+                                        <a href="" class="btn button-small" onclick="document.body.classList.add('popup-open');document.querySelector('.popup-outer-box').classList.add('active');return false;">Начать работать</a>
                                     </div>
                                 </div>
                             </div>
@@ -645,7 +648,7 @@
                     <!--/item wrap-->
                 </div>
                 <div class="action-box">
-                    <a href="" class="btn button-large">начать работать</a>
+                    <a href="" class="btn button-large" onclick="document.body.classList.add('popup-open');document.querySelector('.popup-outer-box').classList.add('active');return false;">начать работать</a>
                 </div>
             </div>
             <!--/cars-box-->
@@ -701,6 +704,35 @@
             </div>
         </footer>
         <!-- /footer -->
+
+
+        <div class="popup-outer-box">
+            <div class="popup-box">
+                <a href="" class="btn-action-close" onclick="document.body.classList.remove('popup-open');this.closest('.popup-outer-box').classList.remove('active');return false;"></a>
+                <div class="popup-content-wrap">
+                    <form action="/" class="frm-popup">
+                        <div class="frm-title-wrap">
+                            <div class="frm-title">Отправить заявку</div>
+                        </div>
+                        <div class="frm-row">
+                            <div class="frm-field">
+                                <input type="text" placeholder="Имя" class="form-input">
+                            </div>
+                        </div>
+                        <div class="frm-row">
+                            <div class="frm-field">
+                                <input type="tel" placeholder="Телефон" class="form-input">
+                            </div>
+                        </div>
+                        <div class="frm-row-submit">
+                            <div class="frm-field">
+                                <button type="submit" class="btn">Отправить</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div><!--/popup-outer-box-->
 
     </div>
     <!-- /wrap -->

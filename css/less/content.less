@@ -1,6 +1,95 @@
 /* ----------------------------------- *\
 			content styles
 \* ----------------------------------- */
+body.popup-open {
+    overflow: hidden;
+}
+.popup-outer-box {
+    display: none;
+    padding: 50px 20px;
+    animation: fadein ease 0.2s;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 100;
+    background: fade(#000, 70);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    &.active {
+        display: flex;
+    }
+}
+.popup-box {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    position: relative;
+    overflow: hidden;
+    width: 400px;
+    max-width: 100%;
+    max-height: 100%;
+    background-color: #fff;
+    z-index: 20;
+    border-radius: 20px;
+    padding: 30px 24px;
+    .popup-title-wrap, .popup-footer-wrap {
+        width: 100%;
+        flex-shrink: 0;
+    }
+    .popup-content-wrap {
+        width: 100%;
+        overflow: auto;
+        -ms-overflow-style: none;
+        &::-webkit-scrollbar {
+            width: 0;
+            height: 0;
+        }
+    }
+    .btn-action-close {
+        display: block;
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 2;
+        &:before, &:after {
+            content: "";
+            display: block;
+            width: 20px;
+            height: 2px;
+            background: var(--clr-base);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin: -1px 0 0 -10px;
+            .t-rotate(45deg);
+        }
+        &:before {
+            .t-rotate(-45deg);
+        }
+    }
+}
+@media (max-width: 1023px) {
+    .popup-outer-box {
+        overflow-y: auto;
+        overflow-x: hidden;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        height: 100%;
+        align-items: flex-start;
+        &::-webkit-scrollbar {
+            width: 0;
+            height: 0;
+        }
+        .popup-box {
+            max-height: inherit;
+            flex-shrink: 0;
+        }
+    }
+}
 .main-section-box {
     margin-bottom: 9rem;
     position: relative;

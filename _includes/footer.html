@@ -15,3 +15,32 @@
 	</div>
 </footer>
 <!-- /footer -->
+
+
+<div class="popup-outer-box">
+	<div class="popup-box">
+		<a href="" class="btn-action-close" onclick="document.body.classList.remove('popup-open');this.closest('.popup-outer-box').classList.remove('active');return false;"></a>
+		<div class="popup-content-wrap">
+			<form action="/" class="frm-popup">
+				<div class="frm-title-wrap">
+					<div class="frm-title">Отправить заявку</div>
+				</div>
+				<div class="frm-row">
+					<div class="frm-field">
+						<input type="text" placeholder="Имя" class="form-input">
+					</div>
+				</div>
+				<div class="frm-row">
+					<div class="frm-field">
+						<input type="tel" placeholder="Телефон" class="form-input">
+					</div>
+				</div>
+				<div class="frm-row-submit">
+					<div class="frm-field">
+						<button type="submit" class="btn">Отправить</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div><!--/popup-outer-box-->
