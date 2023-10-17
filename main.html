@@ -9,10 +9,18 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/reset.css" />
-    <link rel="stylesheet" href="./css/jquery.fancybox.min.css" />
+    <link rel="stylesheet" href="./css/swipebox.min.css" />
     <link rel="stylesheet" href="./css/slick.css" />
     <link rel="stylesheet" href="./css/style.min.css" />
+    <script src="./js/jquery.min.js" defer></script>
+    <script src="./js/slick.min.js" defer></script>
+    <script src="./js/jquery.swipebox.min.js" defer></script>
+    <script src="./js/jquery.maskedinput.min.js" defer></script>
+    <script src="./js/scripts.js" defer></script>
 </head>
 
 <body>
@@ -23,14 +31,663 @@
         <!-- header -->
         <header class="header">
             <div class="inner-wrap">
-                44444
+                <div class="logo-wrap">
+                    <a href="" class="logo">
+                        <img src="./img/main/logo.jpg" alt="">
+                    </a>
+                </div>
+                <div class="info-inner-wrap">
+                    <div class="info-wrap">
+                        <div class="elm-ico">
+                            <img src="./img/icons/01.svg" alt="">
+                        </div>
+                        <div class="info-title-wrap">
+                            <div class="info-title">Подключение</div>
+                            <div class="info-subtitle">к агрегаторам</div>
+                        </div>
+                    </div>
+                    <a href="" class="info-wrap">
+                        <div class="elm-ico">
+                            <img src="./img/icons/02.svg" alt="">
+                        </div>
+                        <div class="info-title-wrap">
+                            <div class="info-title title-small">Построить</div>
+                            <div class="info-subtitle">маршрут</div>
+                        </div>
+                    </a>
+                    <div class="info-wrap">
+                        <div class="elm-ico">
+                            <img src="./img/icons/03.svg" alt="">
+                        </div>
+                        <div class="info-title-wrap">
+                            <div class="info-title title-vvsmall">Москва, ул. Краснобогатырская</div>
+                            <div class="info-subtitle title-vsmall">дом 2 стр16 подъезд 2 этаж 3 офис 7</div>
+                        </div>
+                    </div>
+                    <div class="info-wrap">
+                        <div class="elm-ico">
+                            <img src="./img/icons/04.svg" alt="">
+                        </div>
+                        <div class="info-title-wrap">
+                            <div class="info-title"><a href="tel:84953202221" class="link-phone">+7 495 320-222-1</a></div>
+                            <div class="info-title"><a href="tel:89670502020" class="link-phone">+7 967 050 20 20</a></div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </header>
         <!-- /header -->
 
+
         <!-- page -->
-        <div class="page">
-            2222
+        <div class="page-full">
+
+            <!--form-box-->
+            <div class="form-box main-section-box">
+                <div class="photo-inner-wrap">
+                    <img src="./img/top.jpg" alt="" class="img-bg-cover">
+                </div>
+                <div class="form-inner-wrap">
+                    <form action="/" class="form-wrap">
+                        <div class="frm-title h1-title">Приглашаем <br>водителей такси!</div>
+                        <div class="frm-row">
+                            <div class="frm-field">
+                                <input type="text" class="form-input">
+                            </div>
+                        </div>
+                        <div class="frm-row">
+                            <div class="frm-field">
+                                <input type="text" class="form-input">
+                            </div>
+                        </div>
+                        <div class="frm-row-submit">
+                            <div class="frm-field">
+                                <button type="submit" class="btn button-large">ОТПРАВИТЬ ЗАЯВКУ</button>
+                            </div>
+                            <div class="frm-field">
+                                <button type="button" class="btn button-large button-clear">позвонить сейчас</button>
+                            </div>
+                        </div>
+                        <div class="frm-row-info">Работа с ежедневными выплатами на автомобилях</div>
+                    </form>
+                </div>
+            </div>
+            <!--/form-box-->
+
+            <!--terms-box-->
+            <div class="terms-box main-section-box">
+                <div class="title-box">
+                    <h1 class="h1-title">УСЛОВИЯ РАБОТЫ</h1>
+                </div>
+                <div class="items-wrap">
+                    <!--item wrap-->
+                    <div class="item-wrap">
+                        <div class="item-tile-info">
+                            <div class="tile-ico">
+                                <img src="./img/icons/work01.svg" alt="">
+                            </div>
+                            <div class="tile-title-wrap">
+                                <div class="tile-title">ОПЛАТА:</div>
+                                <p>Ежедневные выплаты</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/item wrap-->
+                    <!--item wrap-->
+                    <div class="item-wrap">
+                        <div class="item-tile-info">
+                            <div class="tile-ico">
+                                <img src="./img/icons/work02.svg" alt="">
+                            </div>
+                            <div class="tile-title-wrap">
+                                <div class="tile-title">ГРАФИК РАБОТЫ:</div>
+                                <p>2/2,&nbsp;5/2,&nbsp;6/1,&nbsp;7/0</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/item wrap-->
+                    <!--item wrap-->
+                    <div class="item-wrap">
+                        <div class="item-tile-info">
+                            <div class="tile-ico">
+                                <img src="./img/icons/work03.svg" alt="">
+                            </div>
+                            <div class="tile-title-wrap">
+                                <div class="tile-title">СТРАХОВКА:</div>
+                                <p>ОСАГО за счёт компании</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/item wrap-->
+                    <!--item wrap-->
+                    <div class="item-wrap">
+                        <div class="item-tile-info">
+                            <div class="tile-ico">
+                                <img src="./img/icons/work04.svg" alt="">
+                            </div>
+                            <div class="tile-title-wrap">
+                                <div class="tile-title">ОБУЧЕНИЕ:</div>
+                                <p>Бесплатное качественное обучение за счёт компании</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/item wrap-->
+                    <!--item wrap-->
+                    <div class="item-wrap">
+                        <div class="item-tile-info">
+                            <div class="tile-ico">
+                                <img src="./img/icons/work05.svg" alt="">
+                            </div>
+                            <div class="tile-title-wrap">
+                                <div class="tile-title">Собственное СТО</div>
+                                <p>ТО за счёт компании - летние и зимние шины предоставляются - автосервис в пределах ТТК</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/item wrap-->
+                    <!--item wrap-->
+                    <div class="item-wrap">
+                        <div class="item-tile-info">
+                            <div class="tile-ico">
+                                <img src="./img/icons/work06.svg" alt="">
+                            </div>
+                            <div class="tile-title-wrap">
+                                <div class="tile-title">ТАРИФ ДЕТСКИЙ:</div>
+                                <p>Компания выдаёт детские кресла на все машины</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/item wrap-->
+                    <!--item wrap-->
+                    <div class="item-wrap">
+                        <div class="item-tile-info">
+                            <div class="tile-ico">
+                                <img src="./img/icons/work07.svg" alt="">
+                            </div>
+                            <div class="tile-title-wrap">
+                                <div class="tile-title">ДОПОЛНИТЕЛЬНЫЕ ТАРИФЫ:</div>
+                                <p>Работаем по корпоративным тарифам тоже</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/item wrap-->
+                    <!--item wrap-->
+                    <div class="item-wrap">
+                        <div class="item-tile-info">
+                            <div class="tile-ico">
+                                <img src="./img/icons/work08.svg" alt="">
+                            </div>
+                            <div class="tile-title-wrap">
+                                <div class="tile-title">ВОДИТЕЛИ:</div>
+                                <p>Сменщиков компания подбирает сама</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/item wrap-->
+                    <!--item wrap-->
+                    <div class="item-wrap">
+                        <div class="item-tile-info">
+                            <div class="tile-ico">
+                                <img src="./img/icons/work09.svg" alt="">
+                            </div>
+                            <div class="tile-title-wrap">
+                                <div class="tile-title">ЗАЛОГ:</div>
+                                <p>Машины предоставляются без залога</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/item wrap-->
+                    <!--item wrap-->
+                    <div class="item-wrap">
+                        <div class="item-tile-info">
+                            <div class="tile-ico">
+                                <img src="./img/icons/work10.svg" alt="">
+                            </div>
+                            <div class="tile-title-wrap">
+                                <div class="tile-title">Подключение за 1 час</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/item wrap-->
+                    <!--item wrap-->
+                    <div class="item-wrap">
+                        <div class="item-tile-info">
+                            <div class="tile-ico">
+                                <img src="./img/icons/work11.svg" alt="">
+                            </div>
+                            <div class="tile-title-wrap">
+                                <div class="tile-title">Выплаты без комиссии</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/item wrap-->
+                    <!--item wrap-->
+                    <div class="item-wrap">
+                        <div class="item-tile-info">
+                            <div class="tile-ico">
+                                <img src="./img/icons/work12.svg" alt="">
+                            </div>
+                            <div class="tile-title-wrap">
+                                <div class="tile-title">Брендирование</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/item wrap-->
+                </div>
+                <div class="action-box">
+                    <a href="" class="btn">начать работать</a>
+                </div>
+            </div>
+            <!--/terms-box-->
+
+            <!--catalog-box-->
+            <div class="catalog-box main-section-box">
+                <div class="title-box">
+                    <h1 class="h1-title">Выберите себе автомобиль</h1>
+                </div>
+                <div class="items-wrap">
+                    <!--item wrap-->
+                    <div class="item-wrap">
+                        <div class="item-tile-catalog">
+                            <a href="" class="tile-link"></a>
+                            <div class="tile-photo-wrap">
+                                <div class="tile-photo">
+                                    <img src="./img/car01.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="tile-info-wrap">
+                                <div class="tile-top-wrap">
+                                    <div class="tile-title-wrap">
+                                        <div class="tile-title">Киа Оптима</div>
+                                    </div>
+                                    <div class="tile-features-wrap">
+                                        <table>
+                                            <tbody>
+                                                <tr>
+                                                    <th>Коробка</th>
+                                                    <td>Автомат</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Привод</th>
+                                                    <td>Передний</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Мощность двигателя</th>
+                                                    <td>110</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Страхование</th>
+                                                    <td>КАСКО, ОСАГО</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="tile-list-wrap">
+                                        <div class="tile-list-title">Подходит для работы в тарифах:</div>
+                                        <div class="tile-stickers-wrap">
+                                            <div class="tile-sticker">Комфорт</div>
+                                            <div class="tile-sticker">Комфорт+</div>
+                                            <div class="tile-sticker">Эконом</div>
+                                            <div class="tile-sticker">Детский</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tile-action-wrap">
+                                    <div class="tile-price-wrap">
+                                        <div class="tile-price">от 2150 ₽</div>
+                                        в сутки
+                                    </div>
+                                    <div class="tile-button-wrap">
+                                        <a href="" class="btn button-small">Начать работать</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/item wrap-->
+                    <!--item wrap-->
+                    <div class="item-wrap">
+                        <div class="item-tile-catalog">
+                            <a href="" class="tile-link"></a>
+                            <div class="tile-photo-wrap">
+                                <div class="tile-photo">
+                                    <img src="./img/car02.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="tile-info-wrap">
+                                <div class="tile-top-wrap">
+                                    <div class="tile-title-wrap">
+                                        <div class="tile-title">Форд Фокус 3 универсал</div>
+                                    </div>
+                                    <div class="tile-features-wrap">
+                                        <table>
+                                            <tbody>
+                                                <tr>
+                                                    <th>Коробка</th>
+                                                    <td>Автомат</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Привод</th>
+                                                    <td>Передний</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Мощность двигателя</th>
+                                                    <td>110</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Страхование</th>
+                                                    <td>КАСКО, ОСАГО</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="tile-list-wrap">
+                                        <div class="tile-list-title">Подходит для работы в тарифах:</div>
+                                        <div class="tile-stickers-wrap">
+                                            <div class="tile-sticker">Эконом</div>
+                                            <div class="tile-sticker">Комфорт</div>
+                                            <div class="tile-sticker">Детский</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tile-action-wrap">
+                                    <div class="tile-price-wrap">
+                                        <div class="tile-price">от 1300 ₽</div>
+                                        в сутки
+                                    </div>
+                                    <div class="tile-button-wrap">
+                                        <a href="" class="btn button-small">Начать работать</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/item wrap-->
+                    <!--item wrap-->
+                    <div class="item-wrap">
+                        <div class="item-tile-catalog">
+                            <a href="" class="tile-link"></a>
+                            <div class="tile-photo-wrap">
+                                <div class="tile-photo">
+                                    <img src="./img/car03.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="tile-info-wrap">
+                                <div class="tile-top-wrap">
+                                    <div class="tile-title-wrap">
+                                        <div class="tile-title">Шкода Октавия</div>
+                                    </div>
+                                    <div class="tile-features-wrap">
+                                        <table>
+                                            <tbody>
+                                                <tr>
+                                                    <th>Коробка</th>
+                                                    <td>Автомат</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Привод</th>
+                                                    <td>Передний</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Мощность двигателя</th>
+                                                    <td>110</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Страхование</th>
+                                                    <td>КАСКО, ОСАГО</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="tile-list-wrap">
+                                        <div class="tile-list-title">Подходит для работы в тарифах:</div>
+                                        <div class="tile-stickers-wrap">
+                                            <div class="tile-sticker">Комфорт</div>
+                                            <div class="tile-sticker">Комфорт+</div>
+                                            <div class="tile-sticker">Эконом</div>
+                                            <div class="tile-sticker">Детский</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tile-action-wrap">
+                                    <div class="tile-price-wrap">
+                                        <div class="tile-price">от 1700 ₽</div>
+                                        в сутки
+                                    </div>
+                                    <div class="tile-button-wrap">
+                                        <a href="" class="btn button-small">Начать работать</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/item wrap-->
+                    <!--item wrap-->
+                    <div class="item-wrap">
+                        <div class="item-tile-catalog">
+                            <a href="" class="tile-link"></a>
+                            <div class="tile-photo-wrap">
+                                <div class="tile-photo">
+                                    <img src="./img/car04.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="tile-info-wrap">
+                                <div class="tile-top-wrap">
+                                    <div class="tile-title-wrap">
+                                        <div class="tile-title">Шкода Рапид</div>
+                                    </div>
+                                    <div class="tile-features-wrap">
+                                        <table>
+                                            <tbody>
+                                                <tr>
+                                                    <th>Коробка</th>
+                                                    <td>Автомат</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Привод</th>
+                                                    <td>Передний</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Мощность двигателя</th>
+                                                    <td>110</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Страхование</th>
+                                                    <td>КАСКО, ОСАГО</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="tile-list-wrap">
+                                        <div class="tile-list-title">Подходит для работы в тарифах:</div>
+                                        <div class="tile-stickers-wrap">
+                                            <div class="tile-sticker">Эконом</div>
+                                            <div class="tile-sticker">Комфорт</div>
+                                            <div class="tile-sticker">Детский</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tile-action-wrap">
+                                    <div class="tile-price-wrap">
+                                        <div class="tile-price">от 1500 ₽</div>
+                                        в сутки
+                                    </div>
+                                    <div class="tile-button-wrap">
+                                        <a href="" class="btn button-small">Начать работать</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/item wrap-->
+                </div>
+            </div>
+            <!--/catalog-box-->
+
+            <!--works-box-->
+            <div class="works-box main-section-box">
+                <div class="title-box">
+                    <h1 class="h1-title">Кого нанимаем на работу?</h1>
+                    <p>Для работы водителем в такси, водитель должен соответствовать следующим требованиям</p>
+                </div>
+                <div class="items-wrap">
+                    <!--item wrap-->
+                    <div class="item-wrap">
+                        <div class="item-tile-info tile-second">
+                            <div class="tile-ico">
+                                <img src="./img/icons/work13.png" alt="">
+                            </div>
+                            <div class="tile-title-wrap">
+                                <div class="tile-title">Водительский стаж 3 года</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/item wrap-->
+                    <!--item wrap-->
+                    <div class="item-wrap">
+                        <div class="item-tile-info tile-second">
+                            <div class="tile-ico">
+                                <img src="./img/icons/work14.png" alt="">
+                            </div>
+                            <div class="tile-title-wrap">
+                                <div class="tile-title">Водительские права российской федерации</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/item wrap-->
+                    <!--item wrap-->
+                    <div class="item-wrap">
+                        <div class="item-tile-info tile-second">
+                            <div class="tile-ico">
+                                <img src="./img/icons/work15.png" alt="">
+                            </div>
+                            <div class="tile-title-wrap">
+                                <div class="tile-title">Водительское удостоверение категории B</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/item wrap-->
+                </div>
+            </div>
+            <!--/works-box-->
+
+            <!--partners-box-->
+            <div class="partners-box main-section-box section-border">
+                <div class="title-box">
+                    <h1 class="h1-title">ОФИЦИАЛЬНЫЙ ПАРТНЕР</h1>
+                </div>
+                <div class="items-wrap">
+                    <!--item wrap-->
+                    <div class="item-wrap">
+                        <div class="item-tile-logo tile-small">
+                            <img src="./img/partner01.png" alt="">
+                        </div>
+                    </div>
+                    <!--/item wrap-->
+                    <!--item wrap-->
+                    <div class="item-wrap">
+                        <div class="item-tile-logo tile-small">
+                            <img src="./img/partner02.png" alt="">
+                        </div>
+                    </div>
+                    <!--/item wrap-->
+                    <!--item wrap-->
+                    <div class="item-wrap">
+                        <div class="item-tile-logo tile-small">
+                            <img src="./img/partner03.png" alt="">
+                        </div>
+                    </div>
+                    <!--/item wrap-->
+                </div>
+            </div>
+            <!--/partners-box-->
+
+            <!--cars-box-->
+            <div class="cars-box main-section-box">
+                <div class="title-box title-center">
+                    <h1 class="h1-title">НАШИ АВТОМОБИЛИ</h1>
+                </div>
+                <div class="items-wrap">
+                    <!--item wrap-->
+                    <div class="item-wrap">
+                        <div class="item-tile-logo">
+                            <img src="./img/logo01.svg" alt="">
+                        </div>
+                    </div>
+                    <!--/item wrap-->
+                    <!--item wrap-->
+                    <div class="item-wrap">
+                        <div class="item-tile-logo">
+                            <img src="./img/logo02.svg" alt="">
+                        </div>
+                    </div>
+                    <!--/item wrap-->
+                    <!--item wrap-->
+                    <div class="item-wrap">
+                        <div class="item-tile-logo">
+                            <img src="./img/logo03.svg" alt="">
+                        </div>
+                    </div>
+                    <!--/item wrap-->
+                    <!--item wrap-->
+                    <div class="item-wrap">
+                        <div class="item-tile-text">
+                            <div class="tile-text">Все ТС находятся в отличном состоянии</div>
+                        </div>
+                    </div>
+                    <!--/item wrap-->
+                    <!--item wrap-->
+                    <div class="item-wrap">
+                        <div class="item-tile-text">
+                            <div class="tile-text">Возможность работы на брендированных и не брендированных машинах!</div>
+                        </div>
+                    </div>
+                    <!--/item wrap-->
+                    <!--item wrap-->
+                    <div class="item-wrap">
+                        <div class="item-tile-text">
+                            <div class="tile-text">Автомобили работают в тарифах <br><span class="text-large">Эконом, Комфорт, Комфорт плюс, Детский</span></div>
+                        </div>
+                    </div>
+                    <!--/item wrap-->
+                </div>
+                <div class="action-box">
+                    <a href="" class="btn button-large">начать работать</a>
+                </div>
+            </div>
+            <!--/cars-box-->
+
+            <!--form-box-->
+            <div class="form-box section-bottom main-section-box">
+                <div class="photo-inner-wrap">
+                    <img src="./img/bottom.jpg" alt="" class="img-bg-cover">
+                </div>
+                <div class="form-inner-wrap">
+                    <form action="/" class="form-wrap">
+                        <div class="frm-title h1-title">Оставьте заявку сейчас и<br> приступите к работе в <br> день обращения!</div>
+                        <div class="frm-row">
+                            <div class="frm-field">
+                                <input type="text" class="form-input">
+                            </div>
+                        </div>
+                        <div class="frm-row">
+                            <div class="frm-field">
+                                <input type="text" class="form-input">
+                            </div>
+                        </div>
+                        <div class="frm-row-submit">
+                            <div class="frm-field">
+                                <button type="submit" class="btn button-large">оставь заявку сейчас!</button>
+                            </div>
+                            <div class="frm-field">
+                                <button type="button" class="btn button-large button-clear">позвонить сейчас</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!--/form-box-->
+
         </div>
         <!-- /page -->
 
@@ -38,7 +695,16 @@
         <!-- footer -->
         <footer class="footer">
             <div class="inner-wrap">
-                333333
+                <div class="logo-wrap">
+                    <a href="" class="logo">
+                        <img src="./img/main/logo-footer.png" alt="">
+                    </a>
+                </div>
+                <div class="info-inner-wrap">
+                    <p><span class="title-small"><a href="tel:89690502020">+7 969 050 20 20</a></span></p>
+                    <p><span class="title-small">Москва, ул. Краснобогатырская</span> <br>дом 2 стр16 подъезд 2 этаж 3 офис 7</p>
+                    <p><a href="">Построить маршрут</a> <a href="">Andoid</a> | <a href="">iOS</a></p>
+                </div>
             </div>
         </footer>
         <!-- /footer -->
@@ -46,11 +712,7 @@
     </div>
     <!-- /wrap -->
 
-    <script src="./js/jquery.min.js"></script>
-    <script src="./js/jquery.fancybox.min.js"></script>
-    <script src="./js/slick.min.js"></script>
-    <script src="./js/jquery.maskedinput.min.js"></script>
-    <script src="./js/scripts.js"></script>
+
 
 </body>
 
